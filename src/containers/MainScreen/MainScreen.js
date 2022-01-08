@@ -10,8 +10,10 @@ import {
 import Colors from '../../constants/Colors';
 import Images from '../../constants/Images';
 import styles from './styles';
+import NavigationConstants from '../../constants/NavigationConstants';
 
-const MainScreen = () => {
+const MainScreen = props => {
+  const {navigation} = props;
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -32,7 +34,9 @@ const MainScreen = () => {
           <TouchableOpacity
             style={styles.getStartedBtn}
             activeOpacity={0.8}
-            onPress={() => {}}>
+            onPress={() => {
+              navigation.navigate(NavigationConstants.loginScreen);
+            }}>
             <Text style={styles.getStartedBtnText}>Get started</Text>
           </TouchableOpacity>
         </View>
