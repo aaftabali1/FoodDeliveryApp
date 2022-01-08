@@ -1,4 +1,5 @@
 export default {
-  mainScreen: 'MainScreen',
   beforeLogin: 'beforeLogin',
+  mainScreen: 'MainScreen',
+  loginScreen: 'LoginScreen',
 };
