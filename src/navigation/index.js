@@ -1,11 +1,13 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainScreen from '../containers/MainScreen';
 import NavigationConstants from '../constants/NavigationConstants';
 import LoginScreen from '../containers/LoginScreen';
+import Dashboard from '../containers/Dashboard';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const beforeLogin = () => {
   return (
@@ -22,6 +24,17 @@ const beforeLogin = () => {
   );
 };
 
+const drawer = () => {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen
+        name={NavigationConstants.dashboard}
+        component={Dashboard}
+      />
+    </Drawer.Navigator>
+  );
+};
+
 const Navigation = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -29,6 +42,7 @@ const Navigation = () => {
         name={NavigationConstants.beforeLogin}
         component={beforeLogin}
       />
+      <Stack.Screen name={NavigationConstants.drawer} component={drawer} />
     </Stack.Navigator>
   );
 };

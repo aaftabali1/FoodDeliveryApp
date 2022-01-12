@@ -80,7 +80,7 @@ const LoginScreen = props => {
               style={styles.getStartedBtn}
               activeOpacity={0.8}
               onPress={() => {
-                navigation.navigate(NavigationConstants.loginScreen);
+                navigation.navigate(NavigationConstants.drawer);
               }}>
               <Text style={styles.getStartedBtnText}>Login</Text>
             </TouchableOpacity>
