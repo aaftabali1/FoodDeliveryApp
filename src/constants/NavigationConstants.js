@@ -4,4 +4,7 @@ export default {
   loginScreen: 'LoginScreen',
   drawer: 'Drawer',
   dashboard: 'Dashboard',
+  profile: 'Profile',
+  favorites: 'Favorites',
+  orderHistory: 'OrderHistory',
 };

@@ -4,4 +4,5 @@ export default {
   themePrimaryRed: '#FF4B3A',
   primaryOrange: '#FA4A0C',
   bgGray: '#EDEDED',
+  bgColorDashboard: '#F2F2F2',
 };
