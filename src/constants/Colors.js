@@ -5,4 +5,5 @@ export default {
   primaryOrange: '#FA4A0C',
   bgGray: '#EDEDED',
   bgColorDashboard: '#F2F2F2',
+  inactiveIconColor: '#ADADAF',
 };

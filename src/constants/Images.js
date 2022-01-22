@@ -9,4 +9,11 @@ export default {
   securityIcon: require('../assets/images/security.png'),
   arrowRight: require('../assets/images/arrowRight.png'),
   menu: require('../assets/images/menu.png'),
+  historyClock: require('../assets/images/historyClock.png'),
+  home: require('../assets/images/home.png'),
+  user: require('../assets/images/user.png'),
+  heart: require('../assets/images/heart.png'),
+  cartIcon: require('../assets/images/cartIcon.png'),
+  search: require('../assets/images/search.png'),
+  food: require('../assets/images/food.png'),
 };

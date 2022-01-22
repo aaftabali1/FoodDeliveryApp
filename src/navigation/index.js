@@ -171,6 +171,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 5,
   },
+  TabBarMainContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingBottom: 25,
+  },
+  inactiveIcon: {
+    tintColor: Colors.inactiveIconColor,
+    resizeMode: 'contain',
+    width: 25,
+    height: 25,
+  },
+  activeIcon: {
+    tintColor: Colors.primaryOrange,
+    resizeMode: 'contain',
+    width: 25,
+    height: 25,
+  },
 });
 
 const drawer = () => {
@@ -229,32 +246,52 @@ const CustomTabBar = props => {
         onPress={navigateToDashboardScreen}
         activeOpacity={0.6}
         style={styles.button}>
-        <Image source={Images.profileIcon} />
+        <Image
+          source={Images.home}
+          style={[
+            styles.inactiveIcon,
+            props.state.index === 0 && styles.activeIcon,
+          ]}
+        />
       </TouchableOpacity>
-
-      <View style={{height: 50, backgroundColor: '#fff', width: 2}} />
 
       <TouchableOpacity
         onPress={navigateToFavoritesScreen}
         activeOpacity={0.6}
         style={styles.button}>
-        <Text style={styles.TextStyle}> SCREEN 2 </Text>
+        <Image
+          source={Images.heart}
+          style={[
+            styles.inactiveIcon,
+            props.state.index === 1 && styles.activeIcon,
+          ]}
+        />
       </TouchableOpacity>
-
-      <View style={{height: 50, backgroundColor: '#fff', width: 2}} />
 
       <TouchableOpacity
         onPress={navigateToProfileScreen}
         activeOpacity={0.6}
         style={styles.button}>
-        <Text style={styles.TextStyle}> SCREEN 3 </Text>
+        <Image
+          source={Images.user}
+          style={[
+            styles.inactiveIcon,
+            props.state.index === 2 && styles.activeIcon,
+          ]}
+        />
       </TouchableOpacity>
 
       <TouchableOpacity
         onPress={navigateToOrderHistoryScreen}
         activeOpacity={0.6}
         style={styles.button}>
-        <Text style={styles.TextStyle}> SCREEN 3 </Text>
+        <Image
+          source={Images.historyClock}
+          style={[
+            styles.inactiveIcon,
+            props.state.index === 3 && styles.activeIcon,
+          ]}
+        />
       </TouchableOpacity>
     </View>
   );
